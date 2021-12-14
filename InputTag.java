@@ -6,7 +6,7 @@ public class InputTag extends Tag {
 	private Type type;
 	private Event event;
 	
-	private String eventAttribute;
+	private String eventAction;
 	private String value;
 	
 	//Overloaded Constructors
@@ -15,52 +15,48 @@ public class InputTag extends Tag {
 			
 	}
 	
-	public InputTag (String id, String name, Type type, Event event, String eventAttribute, String value) {
+	public InputTag (String id, String name, Type type, Event event, String eventAction, String value) {
 		super(id, name);
 		this.type = type;
 		this.event = event;
-		this.eventAttribute = eventAttribute;
+		this.eventAction = eventAction;
 		this.value = value;
 	}
 	
 	public InputTag (String id, String name) {
-		this.id = id;
-		this.name = name;
+		super(id, name);
 	}
 	
-	public InputTag (String id, String name, Event event, String eventAttribute, String value) {
-		this.id = id;
-		this.name = name;
+	public InputTag (String id, String name, Event event, String eventAction, String value) {
+		super(id, name);
 		this.event = event;
-		this.eventAttribute = eventAttribute;
+		this.eventAction = eventAction;
 		this.value = value;
 	}
 	
-	public InputTag (String id, Event event, String eventAttribute, String value) {
+	public InputTag (String id, Event event, String eventAction, String value) {
 		this.id = id;
 		this.event = event;
-		this.eventAttribute = eventAttribute;
+		this.eventAction = eventAction;
 		this.value = value;
 	}
 	
-	public InputTag (String id, Event event, String eventAttribute) {
+	public InputTag (String id, Event event, String eventAction) {
 		this.id = id;
 		this.event = event;
-		this.eventAttribute = eventAttribute;
+		this.eventAction = eventAction;
 	}
 	
 	
-	public InputTag (String id, String name, Event event, String eventAttribute) {
-		this.id = id;
-		this.name = name;
+	public InputTag (String id, String name, Event event, String eventAction) {
+		super(id, name);
 		this.event = event;
-		this.eventAttribute = eventAttribute;
+		this.eventAction = eventAction;
 	}
 	
 	
 	public InputTag (String id, String name, Type type, String value) {
-		this.id = id;
-		this.name = name;
+		super(id, name);
 		this.type = type;
 		this.value = value;
 	}
@@ -98,7 +94,7 @@ public class InputTag extends Tag {
 	
 		if(event != null) {
 			
-			openTag.append(" " + event.toString() + "= \"" + eventAttribute + "\"");
+			openTag.append(" " + event.toString() + "= \"" + eventAction + "\"");
 		}
 		
 		openTag.append(">");
@@ -112,21 +108,16 @@ public class InputTag extends Tag {
 	}
 	
 
-	public void setId(String id) {
-		this.id = id;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-	
-
 	public void setType(Type type) {
 		this.type = type;
 	}
 
 	public void setEvent(Event event) {
 		this.event = event;
+	}
+	
+	public void setEventAttribute(String eventAction) {
+		this.eventAction = eventAction;
 	}
 	
 	public void setValue(String value) {

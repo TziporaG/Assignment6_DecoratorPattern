@@ -26,7 +26,7 @@ public class Main {
 		
 		Tag tag5 = new HTag(1);
 		tag5 = new SmallDecoratorTag(tag5);
-		System.out.println(tag5.getOpenTag() + "Fourth Tag" + tag5.getCloseTag());
+		System.out.println(tag5.getOpenTag() + "5th Tag" + tag5.getCloseTag());
 		
 		
 		
