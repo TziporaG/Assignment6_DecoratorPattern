@@ -2,8 +2,6 @@ package assignment6_decoratorPattern;
 
 public class InputTag extends Tag {
 	
-	private String id;
-	private String name;
 	//enums based on common type and event attributes
 	private Type type;
 	private Event event;
@@ -13,12 +11,12 @@ public class InputTag extends Tag {
 	
 	//Overloaded Constructors
 	public InputTag() {
+		super();
 			
 	}
 	
 	public InputTag (String id, String name, Type type, Event event, String eventAttribute, String value) {
-		this.id = id;
-		this.name = name;
+		super(id, name);
 		this.type = type;
 		this.event = event;
 		this.eventAttribute = eventAttribute;

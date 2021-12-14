@@ -3,11 +3,10 @@ package assignment6_decoratorPattern;
 public class HTag extends Tag {
 	
 	private int size;
-	private String id;
-	private String name;
 	
 	//must specifies a sizes
 	public HTag(int size) {
+		super();
 		
 		if(size != 1 || size != 2 || size != 3 || size != 4 || size != 5 || size != 6 ) {
 			this.size = 1;
@@ -16,11 +15,13 @@ public class HTag extends Tag {
 		else {
 		this.size = size;
 		}
+		
 		
 	}
 	
 	public HTag (String id, String name, int size) {
 		
+		super(id, name);
 		if(size != 1 || size != 2 || size != 3 || size != 4 || size != 5 || size != 6 ) {
 			this.size = 1;
 		}
@@ -29,8 +30,6 @@ public class HTag extends Tag {
 		this.size = size;
 		}
 	
-		this.id = id;
-		this.name = name;
 	}
 
 	public String getOpenTag() {

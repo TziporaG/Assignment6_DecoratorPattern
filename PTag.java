@@ -2,16 +2,12 @@ package assignment6_decoratorPattern;
 
 public class PTag extends Tag {
 	
-	private String id;
-	private String name;
-	
 	public PTag() {
-		
+		super();
 	}
 	
 	public PTag (String id, String name) {
-		this.id = id;
-		this.name = name;
+		super(id, name);
 	}
 
 	public String getOpenTag() {

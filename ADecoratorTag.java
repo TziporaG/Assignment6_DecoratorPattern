@@ -1,18 +1,19 @@
 package assignment6_decoratorPattern;
 
 public class ADecoratorTag extends TagDecorator {
-	
-	private Tag tag;
+
 	private String href;
 	
+	public ADecoratorTag(String id, String name, Tag tag) {
+		super(id, name, tag);
+	}
+	
 	public ADecoratorTag(Tag tag) {
-
-		this.tag = tag;
+		super(tag);
 	}
 	
 	public ADecoratorTag(Tag tag, String href) {
-
-		this.tag = tag;
+		super(tag);
 		this.href = href;
 	}
 	
@@ -26,9 +27,19 @@ public class ADecoratorTag extends TagDecorator {
 			openTag.append(" href = \"" + href + "\"");
 		}
 		
+		if(id != null) {
+			
+			openTag.append(" id = \"" + id + "\"");
+		}
+		
+		if(name != null) {
+			
+			openTag.append(" name = \"" + name + "\"");
+		}
+		
 		openTag.append(">");
 		
-		return  openTag  + tag.getOpenTag();
+		return  openTag.toString()  + tag.getOpenTag();
 	}
 	
 

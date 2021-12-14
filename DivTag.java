@@ -2,16 +2,13 @@ package assignment6_decoratorPattern;
 
 public class DivTag extends Tag {
 	
-	private String id;
-	private String name;
-	
 	public DivTag() {
-		
+		super();
 	}
 	
-	public DivTag (String id, String name) {
-		this.id = id;
-		this.name = name;
+	public DivTag(String id, String name) {
+		super(id, name);
+
 	}
 
 	public String getOpenTag() {

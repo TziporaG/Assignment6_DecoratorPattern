@@ -12,7 +12,7 @@ public class Main {
 		
 		Tag tag2 = new PTag("hello", "hi");
 		tag2 = new EmDecoratorTag(tag2);
-		tag2 = new ItalicizeDecoratorTag(tag2);
+		tag2 = new ItalicizeDecoratorTag("test", "no", tag2);
 		tag2 = new SmallDecoratorTag(tag2);
 		System.out.println(tag2.getOpenTag() + "Computer" + tag2.getCloseTag());
 		
