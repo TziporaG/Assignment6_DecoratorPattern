@@ -3,8 +3,8 @@ package assignment6_decoratorPattern;
 public class Main {
 	
 	public static void main(String [] args) {
-		                        //id,   name,      event,        eventAttribute
-		Tag tag1 = new InputTag("yes", "giraffe", Event.onblur, "alert('No')");
+		                        //id,   name,   type,   event,       eventAttribute, value
+		Tag tag1 = new InputTag("yes", "giraffe", null, Event.onblur, "alert('No')", null);
 		tag1 = new StrongDecoratorTag(tag1);
 		tag1 = new UDecoratorTag(tag1);
 		tag1 = new ADecoratorTag(tag1, "www.school.com");
@@ -16,7 +16,7 @@ public class Main {
 		tag2 = new SmallDecoratorTag(tag2);
 		System.out.println(tag2.getOpenTag() + "Computer" + tag2.getCloseTag());
 		
-		Tag tag3 = new InputTag("yellow", "name", Type.button, "green");
+		Tag tag3 = new InputTag("yellow", "name", Type.button, null, null, "green");
 		tag3 = new ADecoratorTag(tag3);
 		System.out.println(tag3.getOpenTag() + "School" + tag3.getCloseTag());
 		

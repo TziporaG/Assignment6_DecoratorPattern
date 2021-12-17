@@ -23,50 +23,6 @@ public class InputTag extends Tag {
 		this.value = value;
 	}
 	
-	public InputTag (String id, String name) {
-		super(id, name);
-	}
-	
-	public InputTag (String id, String name, Event event, String eventAction, String value) {
-		super(id, name);
-		this.event = event;
-		this.eventAction = eventAction;
-		this.value = value;
-	}
-	
-	public InputTag (String id, Event event, String eventAction, String value) {
-		this.id = id;
-		this.event = event;
-		this.eventAction = eventAction;
-		this.value = value;
-	}
-	
-	public InputTag (String id, Event event, String eventAction) {
-		this.id = id;
-		this.event = event;
-		this.eventAction = eventAction;
-	}
-	
-	
-	public InputTag (String id, String name, Event event, String eventAction) {
-		super(id, name);
-		this.event = event;
-		this.eventAction = eventAction;
-	}
-	
-	
-	public InputTag (String id, String name, Type type, String value) {
-		super(id, name);
-		this.type = type;
-		this.value = value;
-	}
-	
-	public InputTag (String id, String name, String value) {
-		this.id = id;
-		this.name = name;
-		this.value = value;
-	}
-
 	//depending on what attributes have been filled in is what will print
 	public String getOpenTag() {
 		
